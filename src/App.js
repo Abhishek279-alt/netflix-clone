@@ -143,7 +143,7 @@ function App() {
       {/* Enjoy your TV  */}
       <section className="w-[100] bg-[black] border-t-[8px] border-t-[#2f2f2f] sm:py-[50px] py-[50px]">
         <div className="max-w-[80%] mx-auto">
-          <div className="grid sm:grid-cols-2 grid-cols-1 items-center">
+          <div className="grid lg:grid-cols-2 grid-cols-1 items-center md:place-items-center">
             <div className="text-white">
               <h2 className="sm:text-5xl text-4xl font-bold text-center sm:text-start">
                 Enjoy on your TV
@@ -170,7 +170,7 @@ function App() {
       {/* Watch offline  */}
       <section className="w-[100] bg-[black] border-t-[8px] border-t-[#2f2f2f] sm:py-[50px] py-[50px]">
         <div className="max-w-[80%] mx-auto">
-          <div className="grid md:grid-cols-2 grid-cols-1 items-center">
+          <div className="grid lg:grid-cols-2 grid-cols-1 items-center md:place-items-center">
             <div className="text-white order-1 lg:order-2 sm:order-1">
               <h2 className="sm:text-5xl text-4xl font-bold text-center sm:text-start">
                 Download your shows to watch offline
@@ -211,7 +211,7 @@ function App() {
       {/* Watch Everywhere  */}
       <section className="w-[100] bg-[black] border-t-[8px] border-t-[#2f2f2f] sm:py-[50px] py-[50px]">
         <div className="max-w-[80%] mx-auto">
-          <div className="grid sm:grid-cols-2 grid-cols-1 items-center">
+          <div className="grid lg:grid-cols-2 grid-cols-1 items-center md:place-items-center">
             <div className="text-white">
               <h2 className="sm:text-5xl text-4xl font-bold text-center sm:text-start">
                 Watch everywhere
