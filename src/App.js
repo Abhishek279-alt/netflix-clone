@@ -9,6 +9,7 @@ import devicePileIn from "./assets/device-pile-in.png";
 import videoDevice from "./assets/video-devices-in.m4v";
 import childrenImg from "./assets/children.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 function App() {
   const [activeIndex, setActiveIndex] = useState(null);
   const accArray = [
@@ -114,7 +115,9 @@ function App() {
                 className="bg-[rgba(0,0,0,0.5)] border border-gray-500 rounded font-semibold text-lg py-3 pl-3 w-[100%] md:w-[400px]"
               />
               <button className="flex items-center justify-center text-2xl font-semibold bg-red-600 hover:bg-red-700 rounded duration-150 min-w-[230px] py-[11px]">
-                <span>Get Started </span>
+                <span>
+                  <Link to="/browse">Get Started</Link>
+                </span>
                 <span>
                   <svg
                     width="24"
