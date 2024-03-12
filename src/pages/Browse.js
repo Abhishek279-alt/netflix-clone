@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import logo from "../assets/netflix-logo.png";
 import movieBanner from "../assets/banner-2.webp";
 import movieLogo from "../assets/movie-logo.webp";
 import userIcon from "../assets/user.png";
+import noImg from "../assets/no-img.avif";
+import db from "../db.json";
 import "./browse.css";
 const Browse = () => {
   const [dropdown, setDropdown] = useState(false);
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([...db]);
   window.onscroll = () => {
     if (
       document.body.scrollTop > 50 ||
@@ -17,21 +19,7 @@ const Browse = () => {
       document.getElementById("nav").style.backgroundColor = "transparent";
     }
   };
-  const API = `https://www.omdbapi.com/?i=tt3896198&apikey=9a299fd9`;
-  const showMovie = async (url) => {
-    try {
-      const response = await fetch(`${API}&s=avengers&page=2`);
-      const data = await response.json();
-      // console.log(data);
-      setMovies(data.Search);
-      console.log(movies);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    showMovie(`${API}&s=avengers&page=2`);
-  }, []);
+
   return (
     <>
       {/* Navbar Section  */}
@@ -147,7 +135,7 @@ const Browse = () => {
                     key={index}
                   >
                     <img
-                      src={movie.Poster}
+                      src={movie.poster ? movie.poster : noImg}
                       className="object-cover rounded-md w-[100%] h-[100%]"
                       alt="..."
                     />
@@ -173,7 +161,7 @@ const Browse = () => {
                     key={index}
                   >
                     <img
-                      src={movie.Poster}
+                      src={movie.poster ? movie.poster : noImg}
                       className="object-cover rounded-md w-[100%] h-[100%]"
                       alt="..."
                     />
