@@ -1,3 +1,10 @@
+body {
+  background-color: #000;
+}
 #nav {
   transition: all 0.5s ease;
+}
+
+.crousel::-webkit-scrollbar {
+  display: none;
 }
