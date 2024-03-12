@@ -17,7 +17,7 @@ const Browse = () => {
       document.getElementById("nav").style.backgroundColor = "transparent";
     }
   };
-  const API = `https://www.omdbapi.com/?i=tt3896198&apikey=${process.env.REACT_APP_NUM}`;
+  const API = `https://www.omdbapi.com/?i=tt3896198&apikey=9a299fd9`;
   const showMovie = async (url) => {
     try {
       const response = await fetch(`${API}&s=avengers&page=2`);
